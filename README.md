@@ -1,24 +1,13 @@
-# README
+# InstaDans - An Instagram clone on rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Download and run the code locally
+Download: Ruby version: 2.6.6
+          Rails version: 5.2.1
 
-Things you may want to cover:
+Run:      bundle install (to install gems)
+          rails db:create db:migrate db:seed (to initialise database)
+          rails s (to run local server)
 
-* Ruby version
+Visit:    localhost:3000
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Funcionality: View/Add new posts, login and profile view, hashtag search function
