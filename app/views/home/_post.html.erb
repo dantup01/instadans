@@ -3,13 +3,13 @@
     <div class="avatar">
       <% if post.user.avatar.attached? %>
         <%= link_to user_path(post.user) do %>
-          <%= image_tag post.user.avatar %>
+          <%= cl_image_tag post.user.avatar.key %>
         <% end %>
       <% end %>
     </div>
     <%= link_to post.user.username, user_path(post.user), class: 'username' %>
   </div>
-  <%= image_tag post.image, class: 'main-image' %>
+  <%= cl_image_tag post.image.key, class: 'main-image' %>
   <div class="description">
     <%= render partial: "posts/description", locals: {post: post} %>
   </div>

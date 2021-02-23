@@ -9,7 +9,7 @@
     <% @posts.each do |post|%>
       <div class="wrapper">
         <%=link_to post_path(post) do %>
-          <%=image_tag post.image %>
+          <%=cl_image_tag post.image.key %>
         <% end %>
       </div>
     <% end %>
