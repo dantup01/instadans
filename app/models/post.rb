@@ -1,15 +1,15 @@
 class Post < ApplicationRecord
   belongs_to :user
-  has_one_attached :image
+  has_one_attached :photo
 
   has_many :post_hash_tags
   has_many :hash_tags, through: :post_hash_tags
 
-  validate :image_presence
+  validate :photo_presence
   after_commit :create_hash_tags, on: :create
 
-  def image_presence
-    errors.add(:image, "can't be blank") unless image.attached?
+  def photo_presence
+    errors.add(:photo, "can't be blank") unless photo.attached?
   end
 
   def create_hash_tags

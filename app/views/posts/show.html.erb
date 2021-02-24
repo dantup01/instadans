@@ -5,9 +5,9 @@
   <div class="col-md-4">
     <div class="user">
       <div class="avatar">
-        <% if @post.user.avatar.attached? %>
+        <% if @post.user.photo.attached? %>
           <%= link_to user_path(@post.user) do %>
-            <%= cl_image_tag @post.user.avatar.key %>
+            <%= cl_image_tag @post.user.photo.key %>
           <% end %>
         <% end %>
       </div>

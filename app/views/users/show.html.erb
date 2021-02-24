@@ -2,8 +2,8 @@
   <div class="profile row">
     <div class="col-md-4 avatar">
       <div class="wrapper">
-        <% if @user.avatar.attached? %>
-          <%= cl_image_tag @user.avatar.key %>
+        <% if @user.photo.attached? %>
+          <%= cl_image_tag @user.photo.key %>
         <%end %>
       </div>
     </div>
@@ -49,7 +49,7 @@
     <% @posts.each do |post|%>
       <div class="wrapper">
         <%=link_to post_path(post) do %>
-          <%=cl_image_tag post.image.key %>
+          <%=cl_image_tag post.photo.key %>
         <% end %>
       </div>
     <% end %>
